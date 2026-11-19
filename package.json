@@ -1,0 +1,64 @@
+{
+  "name": "dsh-plugin-finder",
+  "version": "0.1.0",
+  "description": "Keyword finder for the DeepSeek Harness Plugins page: Ctrl+F focuses a search box, cards are filtered by title, description or package name, and Enter opens the first result. 在 DSH「插件」页顶栏加一条搜索框，Ctrl+F 聚焦、按标题/简介/包名过滤、回车打开第一个结果。",
+  "license": "MIT",
+  "author": "lyx6666 (https://github.com/liuyuxuan6666)",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.1-rc.3 <0.3.0"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "plugins",
+    "search",
+    "filter",
+    "ui",
+    "keyboard"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuyuxuan6666/dsh-plugin-finder.git"
+  },
+  "homepage": "https://github.com/liuyuxuan6666/dsh-plugin-finder#readme",
+  "bugs": {
+    "url": "https://github.com/liuyuxuan6666/dsh-plugin-finder/issues"
+  },
+  "scripts": {
+    "check": "node --check lib/client.js && node --check lib/index.js",
+    "test": "node --test test/*.test.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "^27.0.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  }
+}

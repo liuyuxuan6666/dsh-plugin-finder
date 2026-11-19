@@ -1,0 +1,5 @@
+# Loader rows contributed when a profile lists this bundle.
+- insert:
+    - id: plugin-finder
+      name: dsh-plugin-finder
+      config: {}

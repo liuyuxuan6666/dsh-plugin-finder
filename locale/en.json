@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Plugin finder",
+    "description": "Adds a search box to the Plugins page header. Ctrl+F (Cmd+F on macOS) focuses it; typing filters the plugin cards by title, description or package name; Enter opens the first result and Shift+Enter flashes it. Read-only: it only hides cards and groups while a query is active, sends no requests, and restores the untouched list when the box is cleared."
+  }
+}
